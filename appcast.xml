@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+  <channel>
+    <title>Tuck-in</title>
+    <link>https://lyg2798.github.io/tuck-in/appcast.xml</link>
+    <description>Tuck-in updates</description>
+    <language>en</language>
+    <item>
+      <title>0.1.0</title>
+      <sparkle:version>85</sparkle:version>
+      <sparkle:shortVersionString>0.1.0</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+      <pubDate>Fri, 10 Jul 2026 01:15:36 -0000</pubDate>
+      <enclosure url="https://github.com/lyg2798/tuck-in/releases/download/v0.1.0/Tuck-in-0.1.0.dmg" type="application/octet-stream" sparkle:edSignature="Vz017qbibv6zZSpvcF4IaEdajxaiTo+me7PjhNurYcgo6+tjBJ75mvCHNeIMVfU1kgHTTIYxF30ijc4MwSqfDg==" length="4674969" />
+    </item>
+  </channel>
+</rss>
