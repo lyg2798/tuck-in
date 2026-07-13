@@ -461,10 +461,35 @@
   .dl-meta .sep{opacity:.4}
   .dl-meta .ok{display:inline-flex; align-items:center; gap:6px; color:var(--good)}
   .dl-meta .ok svg{width:14px; height:14px}
+  /* 터미널 설치 블록 */
+  .dl-term{margin-top:26px; max-width:520px}
+  .dl-term .lbl{display:flex; align-items:center; gap:7px; font-size:12.5px; color:var(--faint); margin:0 0 9px}
+  .dl-term .lbl svg{width:15px; height:15px}
+  .dl-term .box{
+    display:flex; align-items:center; gap:10px;
+    background:var(--notch); border:1px solid var(--line-2); border-radius:12px;
+    padding:11px 12px 11px 15px;
+  }
+  .dl-term .box>code{
+    flex:1; min-width:0; overflow-x:auto; white-space:nowrap; scrollbar-width:none;
+    font-family:ui-monospace,'SF Mono',Menlo,monospace; font-size:12.5px; color:var(--ink);
+  }
+  .dl-term .box>code::-webkit-scrollbar{display:none}
+  .dl-term .cp{
+    flex:none; cursor:pointer; font:inherit; font-size:12px; font-weight:600;
+    color:var(--chip-ink); background:var(--chip); border:1px solid var(--line-2);
+    border-radius:8px; padding:6px 13px; transition:color .15s, border-color .15s;
+  }
+  .dl-term .cp:hover{color:var(--ink); border-color:var(--accent)}
+  .dl-term .cp.done{color:var(--good); border-color:var(--good)}
+  .dl-term .hint{font-size:11.5px; color:var(--faint); opacity:.9; margin:9px 0 0; line-height:1.5}
+  .dl-term .hint code{font-family:ui-monospace,'SF Mono',Menlo,monospace; font-size:.94em; color:var(--mut)}
+  .dl-term .hint a{color:var(--mut); border-bottom:1px solid var(--line-2)}
   @media (max-width:620px){
     .dl-card{grid-template-columns:1fr; text-align:center; justify-items:center}
     .dl-card .tag{margin-left:auto; margin-right:auto}
     .dl-actions,.dl-meta{justify-content:center}
+    .dl-term{text-align:left; width:100%}
   }
 
   /* ═══════════ FOOTER ═══════════ */
@@ -695,10 +720,24 @@
         <div class="nm">Tuck-in<span class="ko">턱킨</span></div>
         <p class="tag">노치 밑에 쏙 들어가는 할 일 위젯. 지금 내려받아 메뉴 바에 붙여 두세요.</p>
         <div class="dl-actions">
-          <a class="cta" href="https://github.com/lyg2798/tuck-in/releases/download/v0.1.0/Tuck-in-0.1.0.dmg">
+          <a class="cta" href="https://github.com/lyg2798/tuck-in/releases/latest/download/Tuck-in.dmg">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4.5-4.5M12 15l4.5-4.5"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
             Mac용 다운로드 (.dmg)
           </a>
+        </div>
+
+        <!-- 터미널 설치 (복사해서 붙여넣기) -->
+        <div class="dl-term">
+          <p class="lbl">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v12H4z"/><path d="M8 10l2.5 2L8 14"/><path d="M13 14h3"/></svg>
+            터미널로 설치 — 복사해서 붙여넣기
+          </p>
+          <div class="box">
+            <code>curl -fsSL https://lyg2798.github.io/tuck-in/install.sh | bash</code>
+            <button class="cp" type="button" aria-label="설치 명령 복사"
+              onclick="var b=this;navigator.clipboard.writeText(b.previousElementSibling.textContent.trim()).then(function(){b.textContent='복사됨';b.classList.add('done');setTimeout(function(){b.textContent='복사';b.classList.remove('done')},1400)}).catch(function(){})">복사</button>
+          </div>
+          <p class="hint">최신 버전을 받아 <code>/Applications</code> 에 설치하고 실행합니다. 스크립트를 먼저 확인하려면 <a href="install.sh">install.sh</a> 를 열어보세요.</p>
         </div>
         <div class="dl-meta">
           <span>macOS 14 이상</span><span class="sep">·</span>
