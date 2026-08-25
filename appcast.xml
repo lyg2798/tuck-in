@@ -6,6 +6,14 @@
     <description>Tuck-in updates</description>
     <language>en</language>
     <item>
+      <title>0.2.4</title>
+      <sparkle:version>114</sparkle:version>
+      <sparkle:shortVersionString>0.2.4</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+      <pubDate>Tue, 25 Aug 2026 01:50:07 -0000</pubDate>
+      <enclosure url="https://github.com/lyg2798/tuck-in/releases/download/v0.2.4/Tuck-in.dmg" type="application/octet-stream" sparkle:edSignature="YelXkaL6f2XfE8uuRVGunmUw8NwGy2nY+jw+QAG+9LSAdkVTOYZSYKnIvZ82a5c+VFHZwcBKLmB1Nh2uS/zgDg==" length="5012754" />
+    </item>
+    <item>
       <title>0.2.3</title>
       <sparkle:version>98</sparkle:version>
       <sparkle:shortVersionString>0.2.3</sparkle:shortVersionString>
